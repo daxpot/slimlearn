@@ -10,15 +10,15 @@
 # ./slim/scripts/train_lenet_on_mnist.sh
 
 # Where the checkpoint and logs will be saved to.
-TRAIN_DIR=/tmp/lenet-model
+TRAIN_DIR=./checkpoints
 
 # Where the dataset is saved to.
-DATASET_DIR=/tmp/mnist
+DATASET_DIR=./datasets/data
 
 # Download the dataset
-python download_and_convert_data.py \
-  --dataset_name=mnist \
-  --dataset_dir=${DATASET_DIR}
+# python download_and_convert_data.py \
+#   --dataset_name=mnist \
+#   --dataset_dir=${DATASET_DIR}
 
 # Run training.
 python train_image_classifier.py \
@@ -39,10 +39,10 @@ python train_image_classifier.py \
   --weight_decay=0
 
 # Run evaluation.
-python eval_image_classifier.py \
-  --checkpoint_path=${TRAIN_DIR} \
-  --eval_dir=${TRAIN_DIR} \
-  --dataset_name=mnist \
-  --dataset_split_name=test \
-  --dataset_dir=${DATASET_DIR} \
-  --model_name=lenet
+# python eval_image_classifier.py \
+#   --checkpoint_path=${TRAIN_DIR} \
+#   --eval_dir=${TRAIN_DIR} \
+#   --dataset_name=mnist \
+#   --dataset_split_name=test \
+#   --dataset_dir=${DATASET_DIR} \
+#   --model_name=lenet
