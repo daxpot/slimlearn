@@ -2,4 +2,5 @@
 .DS_Store
 *.tfrecord
 datasets/data/labels.txt
+checkpoints/*
 
